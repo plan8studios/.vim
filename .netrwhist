@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Volumes/Web/_random/neptune/app'
 let g:netrw_dirhist_2='/Volumes/Web/plan8express/html/.git/info'
 let g:netrw_dirhist_3='/Volumes/Web/plan8express/html/app'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/Volumes/Web/artifactsteach/tradeshow/product'
 let g:netrw_dirhist_6='/Volumes/Web/artifactsteach/tradeshow/product/app'
 let g:netrw_dirhist_7='/Library/WebServer/share/httpd/manual'
 let g:netrw_dirhist_8='/usr/local/etc/apache2/2.4/extra'
+let g:netrw_dirhist_9='/Volumes/Work/TAG/tpb/node_modules/pangyp/bin'

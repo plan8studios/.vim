@@ -18,6 +18,7 @@ Plugin 'sjl/gundo.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'luochen1990/rainbow'
+Plugin 'rizzatti/dash.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,12 +40,12 @@ set encoding=utf-8
 set scrolloff=3
 set ttyfast
 set autoindent
+set smartindent
+set cindent
 set backspace=2
 set fdm=indent
 set foldlevel=2
 set incsearch
-set nocindent
-set smartindent
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
@@ -59,7 +60,8 @@ set background=dark
 set guifont=Source\ Code\ Pro\ for\ Powerline:h12
 
 "colorscheme eclipse
-colorscheme darkbone
+"colorscheme darkbone
+colorscheme smyck
 
 syntax on
 syntax sync fromstart
@@ -97,10 +99,8 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-":TPluginScan! all
 set list
 set listchars=tab:▸\ ,eol:¬
-"nmap <leader>h :set list!<CR>
 nnoremap <F5> :GundoToggle<CR>
 
 inoremap <F1> <ESC>
@@ -133,7 +133,8 @@ let g:NERDTreeDirArrows=0
 let g:CommandTAcceptSelectionMap = '<C-t>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
 
-let g:airline_theme = "luna"
+"let g:airline_theme = "luna"
+let g:airline_theme = "bubblegum"
 let g:airline_powerline_fonts = 1
 
 set statusline+=%#warningmsg#
@@ -145,5 +146,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-"let g:rainbow_active = 1
+let g:rainbow_active = 0
 let g:syntastic_html_tidy_ignore_errors=["<ion-", "discarding unexpected </ion-", " proprietary attribute \"ng-"]
+
+:nmap <silent> <leader>d <Plug>DashSearch
