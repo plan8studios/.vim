@@ -148,6 +148,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:rainbow_active = 0
-let g:syntastic_html_tidy_ignore_errors=["<ion-", "discarding unexpected </ion-", " proprietary attribute \"ng-"]
-
+let g:syntastic_html_tidy_ignore_errors=["<ion-", "discarding unexpected </ion-", " proprietary attribute \"ng-", "trimming empty"]
 :nmap <silent> <leader>d <Plug>DashSearch
+
+let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
