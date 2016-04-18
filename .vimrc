@@ -20,6 +20,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'luochen1990/rainbow'
 Plugin 'rizzatti/dash.vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'jwalton512/vim-blade'
+Bundle 'jistr/vim-nerdtree-tabs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -152,3 +155,4 @@ let g:syntastic_html_tidy_ignore_errors=["<ion-", "discarding unexpected </ion-"
 :nmap <silent> <leader>d <Plug>DashSearch
 
 let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
+let g:nerdtree_tabs_open_on_console_startup=1
