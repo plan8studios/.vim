@@ -22,7 +22,8 @@ Plugin 'rizzatti/dash.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jwalton512/vim-blade'
-Bundle 'jistr/vim-nerdtree-tabs'
+Plugin 'millermedeiros/vim-esformatter'
+Plugin 'csscomb/vim-csscomb'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -132,6 +133,8 @@ nnoremap <tab> %
 vnoremap <tab> %
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
+let g:gundo_preview_bottom=1
+
 let g:NERDTreeDirArrows=0
 
 let g:CommandTAcceptSelectionMap = '<C-t>'
@@ -155,4 +158,11 @@ let g:syntastic_html_tidy_ignore_errors=["<ion-", "discarding unexpected </ion-"
 :nmap <silent> <leader>d <Plug>DashSearch
 
 let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
-let g:nerdtree_tabs_open_on_console_startup=1
+
+nnoremap <silent> <leader>es :Esformatter<CR>
+vnoremap <silent> <leader>es :EsformatterVisual<CR>
+
+" Map bc to run CSScomb. bc stands for beautify css
+autocmd FileType css noremap <buffer> <leader>bc :CSScomb<CR>
+" Automatically comb your CSS on save
+autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
