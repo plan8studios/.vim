@@ -13,7 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'wincent/command-t'
 Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/nerdTree'
+Plugin 'scrooloose/nerdtree'
 Plugin 'sjl/gundo.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
@@ -23,7 +23,9 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jwalton512/vim-blade'
 Plugin 'millermedeiros/vim-esformatter'
-Plugin 'csscomb/vim-csscomb'
+Plugin 'vim-airline/vim-airline-themes'
+" Bundle 'stephpy/vim-php-cs-fixer'
+" Plugin 'csscomb/vim-csscomb'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -135,26 +137,31 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 let g:gundo_preview_bottom=1
 
-let g:NERDTreeDirArrows=0
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeGlyphReadOnly = 'RO'
 
 let g:CommandTAcceptSelectionMap = '<C-t>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
 
-"let g:airline_theme = "luna"
 let g:airline_theme = "bubblegum"
 let g:airline_powerline_fonts = 1
 
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_php_checkers=['php', 'phpcs']
+let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
+let g:syntastic_html_tidy_ignore_errors=["<ion-", "discarding unexpected </ion-", " proprietary attribute \"ng-", "trimming empty"]
 
 let g:rainbow_active = 0
-let g:syntastic_html_tidy_ignore_errors=["<ion-", "discarding unexpected </ion-", " proprietary attribute \"ng-", "trimming empty"]
+
 :nmap <silent> <leader>d <Plug>DashSearch
 
 let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
@@ -163,6 +170,16 @@ nnoremap <silent> <leader>es :Esformatter<CR>
 vnoremap <silent> <leader>es :EsformatterVisual<CR>
 
 " Map bc to run CSScomb. bc stands for beautify css
-autocmd FileType css noremap <buffer> <leader>bc :CSScomb<CR>
+"
+" autocmd FileType css noremap <buffer> <leader>bc :CSScomb<CR>
 " Automatically comb your CSS on save
-autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
+" autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
+
+" let g:php_cs_fixer_path = "~/bin/php-cs-fixer"
+" let g:php_cs_fixer_level = "psr2"
+" let g:php_cs_fixer_config = "default"
+" let g:php_cs_fixer_php_path = "php"
+" let g:php_cs_fixer_enable_default_mapping = 1
+" let g:php_cs_fixer_dry_run = 0
+" let g:php_cs_fixer_verbose = 0
+" autocmd BufWrite *.php silent! call PhpCsFixerFixFile()
