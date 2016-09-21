@@ -24,6 +24,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jwalton512/vim-blade'
 Plugin 'millermedeiros/vim-esformatter'
 Plugin 'vim-airline/vim-airline-themes'
+" Bundle 'edkolev/tmuxline.vim'
 " Bundle 'stephpy/vim-php-cs-fixer'
 " Plugin 'csscomb/vim-csscomb'
 
@@ -61,10 +62,14 @@ set colorcolumn=80
 set modelines=0
 set laststatus=2
 set ruler
+set hidden
+set wildignorecase
 
 set background=dark
-"set gfn=Bitstream\ Vera\ Sans\ Mono:h12
 set guifont=Source\ Code\ Pro\ for\ Powerline:h12
+"set guifont=Input\ Mono:h12
+
+set t_Co=256
 
 "colorscheme eclipse
 "colorscheme darkbone
@@ -183,3 +188,6 @@ vnoremap <silent> <leader>es :EsformatterVisual<CR>
 " let g:php_cs_fixer_dry_run = 0
 " let g:php_cs_fixer_verbose = 0
 " autocmd BufWrite *.php silent! call PhpCsFixerFixFile()
+
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+let g:airline#extensions#tabline#enabled = 1
