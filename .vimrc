@@ -43,7 +43,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" runtime bundles/tplugin_vim/macros/tplugin.vim
+let mapleader = ','
+
 set encoding=utf-8
 set scrolloff=3
 set ttyfast
@@ -66,13 +67,11 @@ set hidden
 set wildignorecase
 
 set background=dark
-set guifont=Source\ Code\ Pro\ for\ Powerline:h12
-"set guifont=Input\ Mono:h12
+"set guifont=Source\ Code\ Pro\ for\ Powerline:h12
+set guifont=Input\ Mono:h12
 
 set t_Co=256
 
-"colorscheme eclipse
-"colorscheme darkbone
 colorscheme smyck
 
 syntax on
@@ -150,9 +149,6 @@ let g:NERDTreeGlyphReadOnly = 'RO'
 let g:CommandTAcceptSelectionMap = '<C-t>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
 
-let g:airline_theme = "bubblegum"
-let g:airline_powerline_fonts = 1
-
 set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -174,20 +170,21 @@ let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
 nnoremap <silent> <leader>es :Esformatter<CR>
 vnoremap <silent> <leader>es :EsformatterVisual<CR>
 
-" Map bc to run CSScomb. bc stands for beautify css
-"
-" autocmd FileType css noremap <buffer> <leader>bc :CSScomb<CR>
-" Automatically comb your CSS on save
-" autocmd BufWritePre,FileWritePre *.css,*.less,*.scss,*.sass silent! :CSScomb
-
-" let g:php_cs_fixer_path = "~/bin/php-cs-fixer"
-" let g:php_cs_fixer_level = "psr2"
-" let g:php_cs_fixer_config = "default"
-" let g:php_cs_fixer_php_path = "php"
-" let g:php_cs_fixer_enable_default_mapping = 1
-" let g:php_cs_fixer_dry_run = 0
-" let g:php_cs_fixer_verbose = 0
-" autocmd BufWrite *.php silent! call PhpCsFixerFixFile()
-
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline#extensions#tabline#show_tab_type = 0
+
+let g:airline_theme = "bubblegum"
+let g:airline_powerline_fonts = 1
+
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
