@@ -188,3 +188,11 @@ nmap <leader>6 <Plug>AirlineSelectTab6
 nmap <leader>7 <Plug>AirlineSelectTab7
 nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
+
+" session settings
+:let g:session_autosave = 'yes'
+:let g:session_persist_font = 0
+:let g:session_persist_colors = 0
+:let g:session_autosave_periodic = 60
+:let g:session_autosave_silent = 0
+:let g:session_lock_enabled = 0
