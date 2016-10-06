@@ -159,7 +159,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_php_checkers=['php', 'phpcs']
 let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
-let g:syntastic_html_tidy_ignore_errors=["<ion-", "discarding unexpected </ion-", " proprietary attribute \"ng-", "trimming empty"]
+let g:syntastic_html_tidy_ignore_errors=["lv-", "<ion-", "discarding unexpected </ion-", " proprietary attribute", "trimming empty"]
 
 let g:rainbow_active = 0
 
