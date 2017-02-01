@@ -1,5 +1,5 @@
 " ~/dotfiles/vim/sessions/pageroost.vim: Vim session script.
-" Created by session.vim 1.5 on 09 October 2016 at 00:11:12.
+" Created by session.vim 1.5 on 27 October 2016 at 00:54:38.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=
@@ -23,14 +23,11 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +37 Plugin/Shopify/src/js/frontend/product.js
-badd +54 Plugin/Shopify/Controller/ShopifyProductsController.php
-badd +91 Plugin/Shopify/View/Elements/AddToCartButton/render.ctp
-badd +65 /Volumes/Work/Websites/neptunedev/html/Plugin/Shopify/View/Elements/ProductPrice/render.ctp
+badd +550 Controller/VisitorsController.php
 argglobal
 silent! argdel *
-set lines=62 columns=118
-edit Plugin/Shopify/src/js/frontend/product.js
+set lines=62 columns=128
+edit Controller/VisitorsController.php
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -45,48 +42,144 @@ setlocal fdl=2
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-3
-normal! zo
-5
-normal! zo
-8
-normal! zo
-9
-normal! zo
-12
-normal! zo
-18
-normal! zo
-19
-normal! zo
-24
-normal! zo
-27
-normal! zo
-35
-normal! zo
-36
-normal! zo
-39
-normal! zo
-39
-normal! zo
-40
-normal! zo
-47
+10
 normal! zo
 48
 normal! zo
-49
+55
 normal! zo
-54
+147
 normal! zo
-let s:l = 38 - ((33 * winheight(0) + 29) / 59)
+148
+normal! zo
+151
+normal! zo
+157
+normal! zo
+161
+normal! zo
+163
+normal! zo
+167
+normal! zo
+168
+normal! zo
+182
+normal! zo
+189
+normal! zo
+190
+normal! zo
+193
+normal! zo
+196
+normal! zo
+199
+normal! zo
+202
+normal! zo
+205
+normal! zo
+210
+normal! zo
+212
+normal! zo
+216
+normal! zo
+219
+normal! zo
+222
+normal! zo
+225
+normal! zo
+229
+normal! zo
+235
+normal! zo
+238
+normal! zo
+239
+normal! zo
+245
+normal! zo
+246
+normal! zo
+250
+normal! zo
+255
+normal! zo
+258
+normal! zo
+265
+normal! zo
+268
+normal! zo
+275
+normal! zo
+276
+normal! zo
+277
+normal! zo
+282
+normal! zo
+283
+normal! zo
+291
+normal! zo
+292
+normal! zo
+294
+normal! zo
+302
+normal! zo
+303
+normal! zo
+310
+normal! zo
+292
+normal! zc
+320
+normal! zo
+321
+normal! zo
+322
+normal! zo
+329
+normal! zo
+333
+normal! zo
+340
+normal! zo
+544
+normal! zo
+545
+normal! zo
+550
+normal! zo
+552
+normal! zo
+561
+normal! zo
+563
+normal! zo
+567
+normal! zo
+568
+normal! zo
+569
+normal! zo
+572
+normal! zo
+568
+normal! zc
+578
+normal! zo
+let s:l = 550 - ((31 * winheight(0) + 29) / 59)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-38
-normal! 017|
+550
+normal! 0
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

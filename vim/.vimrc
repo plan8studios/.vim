@@ -24,6 +24,9 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jwalton512/vim-blade'
 Plugin 'millermedeiros/vim-esformatter'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Shougo/vimproc'
+Plugin 'Quramy/tsuquyomi'
 " Bundle 'edkolev/tmuxline.vim'
 " Bundle 'stephpy/vim-php-cs-fixer'
 " Plugin 'csscomb/vim-csscomb'
@@ -59,7 +62,7 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set textwidth=0
-set colorcolumn=80
+set colorcolumn=120
 set modelines=0
 set laststatus=2
 set ruler
@@ -159,7 +162,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_php_checkers=['php', 'phpcs']
 let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
-let g:syntastic_html_tidy_ignore_errors=["lv-", "<ion-", "discarding unexpected </ion-", " proprietary attribute", "trimming empty"]
+let g:syntastic_php_phpcs_ignore_errors=["not in camel caps"]
+let g:syntastic_html_tidy_ignore_errors=["lv-", "<ion-", "discarding unexpected", " proprietary attribute", "trimming empty", "not recognized", "unescaped &"]
 
 let g:rainbow_active = 0
 
