@@ -27,6 +27,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Shougo/vimproc'
 Plugin 'Quramy/tsuquyomi'
+Plugin 'ChrisPenner/vim-committed'
 " Bundle 'edkolev/tmuxline.vim'
 " Bundle 'stephpy/vim-php-cs-fixer'
 " Plugin 'csscomb/vim-csscomb'
@@ -72,6 +73,7 @@ set wildignorecase
 set background=dark
 "set guifont=Source\ Code\ Pro\ for\ Powerline:h12
 set guifont=Input\ Mono:h12
+set mouse=a
 
 set t_Co=256
 
@@ -141,6 +143,8 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>s :bp<CR>
+nnoremap <leader>f :bn<CR>
 
 let g:gundo_preview_bottom=1
 
@@ -194,9 +198,9 @@ nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
 
 " session settings
-:let g:session_autosave = 'yes'
-:let g:session_persist_font = 0
-:let g:session_persist_colors = 0
-:let g:session_autosave_periodic = 60
-:let g:session_autosave_silent = 0
-:let g:session_lock_enabled = 0
+let g:session_autosave = 'yes'
+let g:session_persist_font = 0
+let g:session_persist_colors = 0
+let g:session_autosave_periodic = 60
+let g:session_autosave_silent = 0
+let g:session_lock_enabled = 0

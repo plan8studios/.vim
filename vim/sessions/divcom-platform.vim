@@ -1,5 +1,5 @@
 " ~/dotfiles/vim/sessions/divcom-platform.vim: Vim session script.
-" Created by session.vim 1.5 on 16 January 2017 at 13:29:54.
+" Created by session.vim 1.5 on 29 June 2017 at 10:16:26.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=
@@ -18,23 +18,20 @@ if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd /Volumes/Work/TAG/divcom/divcom_platform
+cd /Volumes/Storage/Work/TAG/divcom/divcom_platform
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +460 resources/assets/js/Angular/Contents/directives.js
-badd +23 resources/views/admin/content_pages/edit.blade.php
-badd +552 resources/assets/js/Angular/Contents/controllers.js
-badd +13 public/views/Angular/app/Contents/directives/content-field.html
-badd +78 app/Http/Controllers/Api/FilesController.php
-badd +71 database/seeds/AddSettingsSeeder.php
-badd +84 app/Ecommerce/Factories/ProductFactory.php
+badd +217 public/views/Angular/app/Subscriptions/subscription_edit.html
+badd +216 app/Ecommerce/Customer.php
+badd +17 public/views/Angular/frontend/my-account/subscriptions/manage-team.html
+badd +15 app/Ecommerce/Subscription.php
+badd +32 app/BaseModel.php
 argglobal
 silent! argdel *
-argadd ./
-set lines=57 columns=116
-edit app/Ecommerce/Factories/ProductFactory.php
+set lines=55 columns=122
+edit app/Ecommerce/Subscription.php
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -45,22 +42,44 @@ setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=4
+setlocal fdl=2
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-13
+19
 normal! zo
-24
+156
 normal! zo
-84
+178
 normal! zo
-let s:l = 45 - ((40 * winheight(0) + 27) / 54)
+182
+normal! zo
+184
+normal! zo
+189
+normal! zo
+190
+normal! zo
+191
+normal! zo
+192
+normal! zo
+343
+normal! zo
+356
+normal! zo
+387
+normal! zo
+387
+normal! zc
+356
+normal! zc
+let s:l = 183 - ((28 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-45
-normal! 09|
+183
+normal! 026|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
