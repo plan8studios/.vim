@@ -1,5 +1,5 @@
 " ~/dotfiles/vim/sessions/divcom-platform.vim: Vim session script.
-" Created by session.vim 1.5 on 29 June 2017 at 10:16:26.
+" Created by session.vim 1.5 on 07 July 2017 at 14:16:36.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=
@@ -23,15 +23,19 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +217 public/views/Angular/app/Subscriptions/subscription_edit.html
-badd +216 app/Ecommerce/Customer.php
-badd +17 public/views/Angular/frontend/my-account/subscriptions/manage-team.html
-badd +15 app/Ecommerce/Subscription.php
-badd +32 app/BaseModel.php
+badd +685 public/views/Angular/app/Products/product_edit.html
+badd +55 resources/assets/js/Angular/Products/controllers.js
+badd +247 resources/assets/sass/app.scss
+badd +15 resources/assets/sass/products/index.scss
+badd +120 resources/assets/js/Angular/services.js
+badd +81 app/Ecommerce/Factories/DiscountCodeFactory.php
+badd +61 app/Http/Controllers/Api/DiscountCodesController.php
+badd +30 resources/assets/js/Angular/DiscountCodes/controllers.js
+badd +0 Vagrantfile
 argglobal
 silent! argdel *
-set lines=55 columns=122
-edit app/Ecommerce/Subscription.php
+set lines=55 columns=136
+edit Vagrantfile
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -46,40 +50,12 @@ setlocal fdl=2
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-19
-normal! zo
-156
-normal! zo
-178
-normal! zo
-182
-normal! zo
-184
-normal! zo
-189
-normal! zo
-190
-normal! zo
-191
-normal! zo
-192
-normal! zo
-343
-normal! zo
-356
-normal! zo
-387
-normal! zo
-387
-normal! zc
-356
-normal! zc
-let s:l = 183 - ((28 * winheight(0) + 26) / 52)
+let s:l = 11 - ((10 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-183
-normal! 026|
+11
+normal! 05|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
