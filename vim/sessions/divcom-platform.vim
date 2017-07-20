@@ -1,5 +1,5 @@
 " ~/dotfiles/vim/sessions/divcom-platform.vim: Vim session script.
-" Created by session.vim 1.5 on 07 July 2017 at 14:16:36.
+" Created by session.vim 1.5 on 17 July 2017 at 11:23:14.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=
@@ -18,24 +18,17 @@ if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd /Volumes/Storage/Work/TAG/divcom/divcom_platform
+cd ~/work/tag/divcom/platform
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +685 public/views/Angular/app/Products/product_edit.html
-badd +55 resources/assets/js/Angular/Products/controllers.js
-badd +247 resources/assets/sass/app.scss
-badd +15 resources/assets/sass/products/index.scss
-badd +120 resources/assets/js/Angular/services.js
-badd +81 app/Ecommerce/Factories/DiscountCodeFactory.php
-badd +61 app/Http/Controllers/Api/DiscountCodesController.php
-badd +30 resources/assets/js/Angular/DiscountCodes/controllers.js
-badd +0 Vagrantfile
+badd +232 app/Console/Commands/ImportStructure.php
+badd +1 routes/api.php
 argglobal
 silent! argdel *
 set lines=55 columns=136
-edit Vagrantfile
+edit routes/api.php
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -50,12 +43,14 @@ setlocal fdl=2
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 11 - ((10 * winheight(0) + 26) / 52)
+23
+normal! zo
+let s:l = 39 - ((38 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-11
-normal! 05|
+39
+normal! 0
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
