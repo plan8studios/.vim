@@ -35,7 +35,7 @@ plugins=(osx)
 
 source $ZSH/oh-my-zsh.sh
 
-export SVN_EDITOR=mvim
+export SVN_EDITOR=vim
 
 function git_prompt_info() {
 	  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
@@ -76,7 +76,7 @@ alias plan8="ssh root@plan8home.com"
 alias cup="ssh root@192.168.2.2"
 #alias pageroost="ssh -i ~/.ssh/PageRoostApp.pem ubuntu@pageroost.com"
 
-export PATH=/usr/local/git/bin:/Users/geoff/bin:/usr/local/bin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:/Volumes/Work/etc/android-sdk-macosx/build-tools/19.1.0
+export PATH=/usr/local/git/bin:/Users/geoff/bin:/usr/local/bin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:/Volumes/Work/etc/android-sdk-macosx/build-tools/19.1.0:~/.composer/vendor/bin
 # export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 export NVM_DIR="/Users/geoff/.nvm"
@@ -88,3 +88,6 @@ export LANG="$LC_ALL"
 export ANDROID_HOME=/Volumes/Work/etc/android-sdk-macosx
 
 export WEBDRIVER_CHROME_DRIVER=/Users/geoff/bin/chromedriver
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

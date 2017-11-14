@@ -1,5 +1,5 @@
 " ~/dotfiles/vim/sessions/divcom-platform.vim: Vim session script.
-" Created by session.vim 1.5 on 07 July 2017 at 14:16:36.
+" Created by session.vim 1.5 on 05 October 2017 at 09:31:03.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=
@@ -23,24 +23,19 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +685 public/views/Angular/app/Products/product_edit.html
-badd +55 resources/assets/js/Angular/Products/controllers.js
-badd +247 resources/assets/sass/app.scss
-badd +15 resources/assets/sass/products/index.scss
-badd +120 resources/assets/js/Angular/services.js
-badd +81 app/Ecommerce/Factories/DiscountCodeFactory.php
-badd +61 app/Http/Controllers/Api/DiscountCodesController.php
-badd +30 resources/assets/js/Angular/DiscountCodes/controllers.js
-badd +0 Vagrantfile
+badd +226 resources/assets/js/Angular/lms/Certificates/controllers.js
+badd +78 public/views/Angular/app/lms/certificate_ceu_edit.html
+badd +197 app/Http/Controllers/Api/LMS/CertificatesController.php
+badd +412 routes/api.php
 argglobal
 silent! argdel *
 set lines=55 columns=136
-edit Vagrantfile
+edit routes/api.php
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
 wincmd t
-set winheight=1 winwidth=1
+set winminheight=1 winheight=1 winminwidth=1 winwidth=1
 argglobal
 setlocal fdm=indent
 setlocal fde=0
@@ -50,18 +45,19 @@ setlocal fdl=2
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 11 - ((10 * winheight(0) + 26) / 52)
+let s:l = 395 - ((28 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-11
-normal! 05|
+395
+normal! 042|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20 shortmess=filnxtToO
+set winminheight=1 winminwidth=1
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)

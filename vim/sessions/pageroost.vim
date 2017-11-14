@@ -1,5 +1,5 @@
 " ~/dotfiles/vim/sessions/pageroost.vim: Vim session script.
-" Created by session.vim 1.5 on 18 May 2017 at 23:23:23.
+" Created by session.vim 1.5 on 23 October 2017 at 22:15:24.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=
@@ -23,38 +23,79 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +72 src/js/app/index.js
-badd +23 src/js/app/views/Dashboard.jsx
+badd +83 src/js/app/components/GridEditor/GridField.jsx
+badd +208 src/js/app/components/GridEditor/GridEditor.jsx
+badd +37 src/js/app/components/GridEditor/GridColumn.jsx
+badd +86 src/js/app/components/GridEditor/GridRow.jsx
 argglobal
 silent! argdel *
-set lines=47 columns=119
-edit src/js/app/views/Dashboard.jsx
+set lines=52 columns=136
+edit src/js/app/components/GridEditor/GridField.jsx
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
 wincmd t
-set winheight=1 winwidth=1
+set winminheight=1 winheight=1 winminwidth=1 winwidth=1
 argglobal
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=2
+setlocal fdl=4
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 22) / 44)
+13
+normal! zo
+14
+normal! zo
+27
+normal! zo
+36
+normal! zo
+40
+normal! zo
+40
+normal! zc
+83
+normal! zo
+95
+normal! zo
+101
+normal! zo
+107
+normal! zo
+113
+normal! zo
+123
+normal! zo
+108
+normal! zo
+113
+normal! zo
+119
+normal! zo
+134
+normal! zo
+135
+normal! zo
+136
+normal! zo
+140
+normal! zo
+let s:l = 87 - ((75 * winheight(0) + 24) / 49)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+87
+normal! 034|
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
 unlet! s:wipebuf
 set winheight=1 winwidth=20 shortmess=filnxtToO
+set winminheight=1 winminwidth=1
 let s:sx = expand("<sfile>:p:r")."x.vim"
 if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)

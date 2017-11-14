@@ -27,7 +27,9 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Shougo/vimproc'
 Plugin 'Quramy/tsuquyomi'
-Plugin 'ChrisPenner/vim-committed'
+" Plugin 'ChrisPenner/vim-committed'
+Plugin 'posva/vim-vue'
+Plugin 'dracula/vim'
 " Bundle 'edkolev/tmuxline.vim'
 " Bundle 'stephpy/vim-php-cs-fixer'
 " Plugin 'csscomb/vim-csscomb'
@@ -77,7 +79,8 @@ set mouse=a
 
 set t_Co=256
 
-colorscheme smyck
+"colorscheme smyck
+colorscheme dracula
 
 syntax on
 syntax sync fromstart
@@ -167,7 +170,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_php_checkers=['php', 'phpcs']
 let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
 let g:syntastic_php_phpcs_ignore_errors=["not in camel caps"]
-let g:syntastic_html_tidy_ignore_errors=["lv-", "<ion-", "discarding unexpected", " proprietary attribute", "trimming empty", "not recognized", "unescaped &"]
+let g:syntastic_html_tidy_ignore_errors=["lv-", "<ion-", "discarding unexpected", " proprietary attribute", "trimming empty", "not recognized", "unescaped &", "lacks \"action\" attribute"]
 
 let g:rainbow_active = 0
 
