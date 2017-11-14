@@ -71,6 +71,7 @@ alias   grm="git rm"
 alias    gs="git status"
 alias  gmup="git fetch upstream; git merge upstream/master"
 alias gpomr="git pull origin master --rebase"
+alias gflic="git diff --name-only --diff-filter=U"
 
 alias plan8="ssh root@plan8home.com"
 alias cup="ssh root@192.168.2.2"
