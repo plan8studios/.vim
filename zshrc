@@ -75,20 +75,31 @@ alias gflic="git diff --name-only --diff-filter=U"
 
 alias plan8="ssh root@plan8home.com"
 alias cup="ssh root@192.168.2.2"
+alias pyman="python3 manage.py"
 #alias pageroost="ssh -i ~/.ssh/PageRoostApp.pem ubuntu@pageroost.com"
 
-export PATH=/usr/local/git/bin:/Users/geoff/bin:/usr/local/bin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:/Volumes/Work/etc/android-sdk-macosx/build-tools/19.1.0:~/.composer/vendor/bin
+export PATH=/usr/local/git/bin:/Users/geoff/bin:/usr/local/bin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:/Volumes/Work/etc/android-sdk-macosx/build-tools/19.1.0:~/.composer/vendor/bin:/usr/local/share/dotnet
 # export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 export NVM_DIR="/Users/geoff/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export LC_ALL=en_US.utf-8 
-export LANG="$LC_ALL" 
+export LC_ALL=en_US.utf-8
+export LANG="$LC_ALL"
 #export JAVA_HOME=$(/usr/libexec/java_home)
-export ANDROID_HOME=/Volumes/Work/etc/android-sdk-macosx
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home"
+export ANDROID_HOME="/Users/geoff/Library/Android/sdk"
 
 export WEBDRIVER_CHROME_DRIVER=/Users/geoff/bin/chromedriver
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/geoff/bin/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/geoff/bin/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/geoff/bin/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/geoff/bin/google-cloud-sdk/completion.zsh.inc'; fi
