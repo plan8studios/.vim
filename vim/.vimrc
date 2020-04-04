@@ -75,7 +75,7 @@ set wildignorecase
 set background=dark
 "set guifont=Source\ Code\ Pro\ for\ Powerline:h12
 "set guifont=Input\ Mono:h12
-set guifont=Fira\ Code:h12
+set guifont=Fira\ Code\ Regular:h12
 set mouse=a
 
 set t_Co=256

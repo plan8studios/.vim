@@ -74,11 +74,12 @@ alias gpomr="git pull origin master --rebase"
 alias gflic="git diff --name-only --diff-filter=U"
 
 alias plan8="ssh root@plan8home.com"
+alias phil="ssh root@app.philanthropic.ly"
 alias cup="ssh root@192.168.2.2"
 alias pyman="python3 manage.py"
 #alias pageroost="ssh -i ~/.ssh/PageRoostApp.pem ubuntu@pageroost.com"
 
-export PATH=/usr/local/git/bin:/Users/geoff/bin:/usr/local/bin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:/Volumes/Work/etc/android-sdk-macosx/build-tools/19.1.0:~/.composer/vendor/bin:/usr/local/share/dotnet
+export PATH=/usr/local/opt/ruby/bin:/usr/local/git/bin:/Users/geoff/bin:/usr/local/bin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin:/Volumes/Work/etc/android-sdk-macosx/build-tools/19.1.0:~/.composer/vendor/bin:/usr/local/share/dotnet:/Users/geoff/.gem/ruby/2.6.0/bin/:~/.npm-global/bin:/Users/geoff/.cargo/bin
 # export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 export NVM_DIR="/Users/geoff/.nvm"
@@ -103,3 +104,4 @@ if [ -f '/Users/geoff/bin/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/geoff/bin/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/geoff/bin/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/opt/gettext/bin:$PATH"
