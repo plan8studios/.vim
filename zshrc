@@ -42,6 +42,18 @@ function git_prompt_info() {
 	    echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
 }
 
+git_branch() {
+  (command git symbolic-ref -q HEAD || command git name-rev --name-only --no-undefined --always HEAD) 2>/dev/null
+}
+
+function set_node_version() {
+	if [ -f "$PWD/.nvmrc" ]; then
+		nvm use
+	fi
+}
+
+add-zsh-hook chpwd set_node_version
+
 alias     g="git"
 alias    ga="git add"
 alias   gaa="git add ."
@@ -49,6 +61,7 @@ alias    gb="git branch"
 alias   gba="git branch -a"
 alias    gc="git commit"
 alias   gca="git commit -a"
+alias  gcam='git commit -a --amend'
 alias   gcl="git clone"
 alias   gco="git checkout"
 alias  gcob="git checkout -B"
@@ -62,6 +75,7 @@ alias   gmm="git merge master"
 alias   gmv="git mv"
 alias    gp="git rev-parse --abbrev-ref HEAD | xargs git push origin"
 alias   gpu="git rev-parse --abbrev-ref HEAD | xargs git pull origin"
+alias   gpf='git push origin $(git_branch) --force'
 alias    gr="git remote"
 alias   gra="git remote add"
 alias  grao="git remote add origin"
