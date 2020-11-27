@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Volumes/Work/TAG/ct-reports'
-let g:netrw_dirhist_2='/Volumes/Work/Websites/neptunedev'
-let g:netrw_dirhist_3='/Volumes/Work/Websites/neptunedev/html'
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/geoff/dotfiles/vim/pack'
+let g:netrw_dirhist_3='/home/geoff/dotfiles/vim/pack/themes'
+let g:netrw_dirhist_2='/home/geoff/dotfiles/vim/pack'
+let g:netrw_dirhist_1='/home/geoff/dotfiles/vim/pack/plugins/start'

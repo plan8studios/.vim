@@ -1,54 +1,6 @@
 set nocompatible
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'bling/vim-airline'
-" Plugin 'wincent/command-t'
-Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'sjl/gundo.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive'
-Plugin 'luochen1990/rainbow'
-Plugin 'rizzatti/dash.vim'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'jwalton512/vim-blade'
-Plugin 'millermedeiros/vim-esformatter'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'Shougo/vimproc'
-Plugin 'Quramy/tsuquyomi'
-" Plugin 'ChrisPenner/vim-committed'
-Plugin 'posva/vim-vue'
-Plugin 'dracula/vim'
-" Bundle 'edkolev/tmuxline.vim'
-" Bundle 'stephpy/vim-php-cs-fixer'
-" Plugin 'csscomb/vim-csscomb'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
 let mapleader = ','
 
 set encoding=utf-8
@@ -73,18 +25,10 @@ set hidden
 set wildignorecase
 
 set background=dark
-"set guifont=Source\ Code\ Pro\ for\ Powerline:h12
-"set guifont=Input\ Mono:h12
 set guifont=Fira\ Code\ Retina:h12
 set mouse=a
 
 set t_Co=256
-
-"colorscheme smyck
-colorscheme dracula
-
-syntax on
-syntax sync fromstart
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -203,9 +147,16 @@ nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
 
 " session settings
-let g:session_autosave = 'yes'
-let g:session_persist_font = 0
-let g:session_persist_colors = 0
-let g:session_autosave_periodic = 60
-let g:session_autosave_silent = 0
-let g:session_lock_enabled = 0
+" let g:session_autosave = 'yes'
+" let g:session_persist_font = 0
+" let g:session_persist_colors = 0
+" let g:session_autosave_periodic = 60
+" let g:session_autosave_silent = 0
+" let g:session_lock_enabled = 0
+
+syntax sync fromstart
+packadd! dracula
+syntax enable
+colorscheme dracula
+" packadd! nerdtree
+
