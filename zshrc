@@ -1,18 +1,13 @@
+OS_VERSION="$(uname -s)"
 ZSH_DISABLE_COMPFIX=true
 ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
 ZSH_THEME="bira"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 alias tmux="TERM=screen-256color-bce tmux -2"
-alias open="xdg-open"
+if [ $OS_VERSION != "Darwin" ]; then
+	alias open="xdg-open"
+fi
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
