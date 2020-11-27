@@ -1,4 +1,4 @@
-
+ZSH_DISABLE_COMPFIX=true
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
